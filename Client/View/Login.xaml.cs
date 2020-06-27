@@ -35,19 +35,18 @@ namespace Client.View
             string tokenApp = "f12458d120e6d32cf89ee714d35c723d8caa1273c3bcdf1ba79c63df7329254a";
             User user = new User(login,password);
 
-            MessageBox.Show(login + "  " + password);
-
+           // MessageBox.Show(login + "  " + password);
 
             //creating the object of WCF service client         
-           //ServiceReference.Service1Client platform = new ServiceReference.Service1Client();
+           ServiceReferenceTest.AuthServiceClient platform = new ServiceReferenceTest.AuthServiceClient();
 
             //assigning the output value from service Response         
-           // bool auth = platform.authentication(login, password, tokenApp);
+           bool auth = platform.AuthUser(login, password, tokenApp);
 
-           // if (auth) { 
+            if (auth) { 
                 SendFile r = new SendFile();
                 this.NavigationService.Navigate(r);
-         //   }
+            }
         }
 
         private void btnOnClickRegister(object sender, RoutedEventArgs e)

@@ -1,0 +1,104 @@
+﻿<Page
+    x:Class="Client.View.Login"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Client.View"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Login"
+    d:DesignHeight="550"
+    d:DesignWidth="400"
+    mc:Ignorable="d">
+
+    <Grid>
+        <Image
+            Width="100"
+            Margin="0,50,0,0"
+            VerticalAlignment="Top"
+            Panel.ZIndex="1"
+            Source="/Assets/logoWhite.png" />
+        <TextBlock
+            Margin="0,160,0,0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            FontFamily="helvetica"
+            FontSize="22"
+            FontWeight="Light"
+            Foreground="White"
+            Text="Login" />
+
+        <StackPanel Grid.Row="1" Margin="0,220,0,0">
+            <StackPanel Orientation="Horizontal">
+                <TextBox
+                    Name="Username"
+                    Width="235"
+                    Height="25"
+                    Margin="73,0,0,0"
+                    HorizontalAlignment="Center"
+                    HorizontalContentAlignment="Left"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    FontFamily="Helvetica"
+                    FontSize="20"
+                    FontWeight="Light"
+                    Foreground="White"
+                    Opacity="1"
+                    Text="Username" />
+
+            </StackPanel>
+            <Border
+                Width="250"
+                Height="2"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Background="White"
+                Opacity="1" />
+
+
+
+            <StackPanel
+                Grid.Row="3"
+                Margin="0,20,0,0"
+                Orientation="Horizontal">
+                <PasswordBox
+                    Name="Password"
+                    Width="235"
+                    Height="25"
+                    Margin="73,0,0,0"
+                    HorizontalAlignment="Center"
+                    HorizontalContentAlignment="Left"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    FontFamily="Helvetica"
+                    FontSize="20"
+                    FontWeight="Light"
+                    Foreground="White"
+                    Opacity="0.5"
+                    Password="Password" />
+
+            </StackPanel>
+            <Border
+                Width="250"
+                Height="2"
+                Background="White"
+                Opacity="1" />
+
+
+            <StackPanel Margin="0,50,0,0" Orientation="Horizontal">
+                <Button
+                    Width="100"
+                    Height="40"
+                    Margin="70,0,60,0"
+                    BorderThickness="0,1,1,1"
+                    Click="BtnOnClickLogin"
+                    Content="LOGIN" />
+                <Button
+                    Width="100"
+                    Height="40"
+                    Click="btnOnClickRegister"
+                    Content="REGISTER" />
+            </StackPanel>
+
+        </StackPanel>
+    </Grid>
+</Page>

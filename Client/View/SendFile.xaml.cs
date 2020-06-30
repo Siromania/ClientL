@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
+using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -13,6 +16,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Client.Model;
+using Client.ServiceReference1;
+using Client.ServiceReference2;
+
 using Microsoft.Win32;
 
 namespace Client.View
@@ -27,34 +33,62 @@ namespace Client.View
             InitializeComponent();
         }
 
+        Microsoft.Win32.OpenFileDialog openFileDlgGlobal ;
+
         private void btnOnClickChooseFile(object sender, RoutedEventArgs e)
         {
             Microsoft.Win32.OpenFileDialog openFileDlg = new Microsoft.Win32.OpenFileDialog();
             openFileDlg.Filter = "All files (*.txt)|*.txt";
+            openFileDlg.Multiselect = true;
 
             Nullable<bool> result = openFileDlg.ShowDialog();
 
             if (result == true)
             {
-                FileNameTextBox.Text = openFileDlg.SafeFileName;
-                FileNameTextBox.Tag = openFileDlg.FileName;
+                ListFile.ItemsSource = openFileDlg.SafeFileNames;
+                //message += Path.GetFileName(file) + " - " + file + Environment.NewLine;
             }
+            openFileDlgGlobal = openFileDlg;
         }
 
         private void btnOnClickSend(object sender, RoutedEventArgs e)
         {
-           // if (String.IsNullOrEmpty(FileNameTextBox.Tag.ToString())) { 
-            //Get File
-            String tag = FileNameTextBox.Tag.ToString();
-            //readFile
-            StreamReader sr = new StreamReader(tag);
-            String txt = sr.ReadToEnd();
-            //Create Message
-            // User user = new User();
-             // Message msg = new Message();
+            List<Task> tasks = new List<Task>();
+            ServiceReference2.DecryptClient platform = new ServiceReference2.DecryptClient();
+            //Client.ServiceReference1.UserToken auth = platform.AuthUser(login, password, "d");
+            foreach (string fileName in openFileDlgGlobal.FileNames)
+            {
 
-            MessageBox.Show(txt);
-           // }
+                bool statusOp = false;
+                string operationVersion = "1";
+                string appVersion = "toto";
+                string operationName = "m_service";
+                string info = "Envoi du msg a .net";
+                string tokenUser = this.userToken.Tag.ToString();
+                NameValueCollection appConfig = ConfigurationManager.AppSettings;
+                string tokenApp = appConfig.Get("AppToken");
+
+                Filex f = new Filex(fileName);
+                string txt = f.readFile();
+                Object[] data = new Object[]{
+                        f.FilePath,
+                        txt
+                    };
+
+                Task task = new Task(() =>
+                {
+                    Client.ServiceReference2.STG msg = new STG(statusOp, operationVersion, appVersion, operationName, info, tokenUser, tokenApp, data);
+                    // Task t = new Task();
+                    Client.ServiceReference2.STG call = platform.m_service(msg);
+                    MessageBox.Show("Return of the call = " + fileName +" - "+ call.StatusOp.ToString());
+                });
+
+                tasks.Add(task);
+                task.Start();
+
+            }
+            Task.WaitAll(tasks.ToArray());
+
         }
 
         private void btnOnClickExit(object sender, MouseButtonEventArgs e)

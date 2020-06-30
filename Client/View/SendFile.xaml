@@ -11,6 +11,7 @@
     mc:Ignorable="d">
 
     <Grid>
+        <TextBlock Name="userToken" Tag="" />
         <Image
             Width="30"
             Margin="0,15,15,0"
@@ -47,18 +48,35 @@
             TextWrapping="Wrap" />
         <Button
             x:Name="btnOpenFile"
-            Width="106"
-            Height="35"
-            Margin="148,-74,0,0"
+            Width="117"
+            Margin="254,264,29,241.4"
             HorizontalAlignment="Center"
             Click="btnOnClickChooseFile"
-            Content="Choose a file" />
+            Content="Choose files" />
 
+        <ListBox
+            Name="ListFile"
+            Width="194"
+            Height="150"
+            Margin="39,226,0,13"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding}" />
+                    </StackPanel>
+                </DataTemplate>
+
+
+            </ListBox.ItemTemplate>
+
+        </ListBox>
         <Button
             Name="btnSendFile"
             Width="150"
             Height="36"
-            Margin="0,85,0,0"
+            Margin="0,344,0,0"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
             Click="btnOnClickSend">

@@ -38,15 +38,24 @@ namespace Client.View
             MessageBox.Show(login + "  " + password);
 
             //creating the object of WCF service client         
-           ServiceReferenceTest.AuthServiceClient platform = new ServiceReferenceTest.AuthServiceClient();
+           ServiceReference1.AuthServiceClient platform = new ServiceReference1.AuthServiceClient();
 
             //assigning the output value from service Response         
-           //bool auth = platform.AuthUser(login, password, tokenApp);
+            //object auth = platform.AuthUser(login, password, tokenApp);
+            Client.ServiceReference1.UserToken auth = platform.AuthUser(login, password, tokenApp);
 
-            //if (auth) { 
+            //MessageBox.Show(auth.Id);
+
+            if (auth != null) { 
+                
                 SendFile r = new SendFile();
+                r.userToken.Tag = auth.Id;
                 this.NavigationService.Navigate(r);
-            //}
+            }
+            else
+            {
+                MessageBox.Show("The password or username is incorect");
+            }
         }
 
         private void btnOnClickRegister(object sender, RoutedEventArgs e)

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="235148dd-8a37-4a7f-b354-1ceb6df5e471" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="cfbd9fa3-9149-4adf-ad10-55b22af9f30f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <EnableDataBinding>true</EnableDataBinding>
@@ -21,11 +21,11 @@
     <MetadataSource Address="http://52.174.17.244:5051/Login.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Login.xsd" MetadataType="Schema" ID="97123a79-a533-4011-88d8-da666bca2a5e" SourceId="1" SourceUrl="http://52.174.17.244:5051/Login.svc?xsd=xsd1" />
-    <MetadataFile FileName="Login.disco" MetadataType="Disco" ID="a2e32825-c42c-4b77-98fb-f032afd3a003" SourceId="1" SourceUrl="http://52.174.17.244:5051/Login.svc?disco" />
-    <MetadataFile FileName="AuthService.wsdl" MetadataType="Wsdl" ID="005ceb49-31a8-4229-bdad-efa80bd18a30" SourceId="1" SourceUrl="http://52.174.17.244:5051/Login.svc?wsdl" />
-    <MetadataFile FileName="Login1.xsd" MetadataType="Schema" ID="8eb47a31-243b-4f42-8443-d80e275806aa" SourceId="1" SourceUrl="http://52.174.17.244:5051/Login.svc?xsd=xsd2" />
-    <MetadataFile FileName="Login2.xsd" MetadataType="Schema" ID="327a17c4-1f8c-4444-bba4-3360691d6891" SourceId="1" SourceUrl="http://52.174.17.244:5051/Login.svc?xsd=xsd0" />
+    <MetadataFile FileName="Login.xsd" MetadataType="Schema" ID="caf8e258-9e11-42e3-b1a4-45eabd63f383" SourceId="1" SourceUrl="http://52.174.17.244:5051/Login.svc?xsd=xsd1" />
+    <MetadataFile FileName="Login.disco" MetadataType="Disco" ID="664ef041-067b-4c93-a255-51734b03ddba" SourceId="1" SourceUrl="http://52.174.17.244:5051/Login.svc?disco" />
+    <MetadataFile FileName="AuthService.wsdl" MetadataType="Wsdl" ID="18a20104-c5ae-4d4e-b330-5717917bdba6" SourceId="1" SourceUrl="http://52.174.17.244:5051/Login.svc?wsdl" />
+    <MetadataFile FileName="Login1.xsd" MetadataType="Schema" ID="7b8c834e-4e95-4936-a011-ed7376971edc" SourceId="1" SourceUrl="http://52.174.17.244:5051/Login.svc?xsd=xsd2" />
+    <MetadataFile FileName="Login2.xsd" MetadataType="Schema" ID="6999955a-799b-486e-a6a1-21c0983d785c" SourceId="1" SourceUrl="http://52.174.17.244:5051/Login.svc?xsd=xsd0" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

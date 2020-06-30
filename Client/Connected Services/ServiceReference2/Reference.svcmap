@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="3c742047-33fd-4475-9568-68b1731ee694" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5bee55a1-957b-4bbb-bc15-fbc8f11e7f59" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <EnableDataBinding>true</EnableDataBinding>
@@ -21,12 +21,12 @@
     <MetadataSource Address="http://52.174.17.244:5051/Decryptor.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Decryptor2.xsd" MetadataType="Schema" ID="bf82d934-a364-4356-ab6b-972c3e1d92a0" SourceId="1" SourceUrl="http://52.174.17.244:5051/Decryptor.svc?xsd=xsd2" />
-    <MetadataFile FileName="Decryptor3.xsd" MetadataType="Schema" ID="cdfd4844-2abd-4830-a4e3-2e6454aa54d5" SourceId="1" SourceUrl="http://52.174.17.244:5051/Decryptor.svc?xsd=xsd3" />
-    <MetadataFile FileName="Decryptor.xsd" MetadataType="Schema" ID="09b54d73-9aff-445a-a21e-3cff4c01c40d" SourceId="1" SourceUrl="http://52.174.17.244:5051/Decryptor.svc?xsd=xsd1" />
-    <MetadataFile FileName="Decryptor.disco" MetadataType="Disco" ID="38e0ea0f-df39-4dee-920b-dc046b171e18" SourceId="1" SourceUrl="http://52.174.17.244:5051/Decryptor.svc?disco" />
-    <MetadataFile FileName="Decrypt.wsdl" MetadataType="Wsdl" ID="dc75dc9c-cef4-49df-a8e0-19b6044f6609" SourceId="1" SourceUrl="http://52.174.17.244:5051/Decryptor.svc?wsdl" />
-    <MetadataFile FileName="Decryptor1.xsd" MetadataType="Schema" ID="47ee0a6a-97be-48ae-9b8f-e4f6af00ee30" SourceId="1" SourceUrl="http://52.174.17.244:5051/Decryptor.svc?xsd=xsd0" />
+    <MetadataFile FileName="Decryptor.xsd" MetadataType="Schema" ID="20d51074-d030-4f3b-98e5-3c8badf2f3e4" SourceId="1" SourceUrl="http://52.174.17.244:5051/Decryptor.svc?xsd=xsd2" />
+    <MetadataFile FileName="Decryptor1.xsd" MetadataType="Schema" ID="5a49e893-7d9a-4336-8373-d9b9b6a4f906" SourceId="1" SourceUrl="http://52.174.17.244:5051/Decryptor.svc?xsd=xsd3" />
+    <MetadataFile FileName="Decryptor2.xsd" MetadataType="Schema" ID="97879bff-491d-4ebe-9e95-62b91c2de99c" SourceId="1" SourceUrl="http://52.174.17.244:5051/Decryptor.svc?xsd=xsd1" />
+    <MetadataFile FileName="Decryptor.disco" MetadataType="Disco" ID="456ea662-9dcf-490c-928f-8d9df9cdcc9c" SourceId="1" SourceUrl="http://52.174.17.244:5051/Decryptor.svc?disco" />
+    <MetadataFile FileName="Decrypt.wsdl" MetadataType="Wsdl" ID="6a1da024-d0f0-4244-895c-be03b09474c3" SourceId="1" SourceUrl="http://52.174.17.244:5051/Decryptor.svc?wsdl" />
+    <MetadataFile FileName="Decryptor3.xsd" MetadataType="Schema" ID="d8528601-1fd8-4083-a629-d565a05a786c" SourceId="1" SourceUrl="http://52.174.17.244:5051/Decryptor.svc?xsd=xsd0" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

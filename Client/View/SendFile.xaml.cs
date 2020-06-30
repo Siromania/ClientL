@@ -77,7 +77,7 @@ namespace Client.View
 
                 Task task = new Task(() =>
                 {
-                    Client.ServiceReference2.STG msg = new STG(statusOp, operationVersion, appVersion, operationName, info, tokenUser, tokenApp, data);
+                    Client.ServiceReference2.STG msg = new STGClient(statusOp, operationVersion, appVersion, operationName, info, tokenUser, tokenApp, data);
                     Client.ServiceReference2.STG call = platform.m_service(msg);
                     System.Diagnostics.Debug.WriteLine("Return of the call = " + fileName + " - " + call.StatusOp.ToString());
                     //MessageBox.Show("Return of the call = " + fileName +" - "+ call.StatusOp.ToString());

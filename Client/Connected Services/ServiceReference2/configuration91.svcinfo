@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="xBIYEBymWR/ZjzYYiyuErivFYdviq71MWV8nN2LYKg8=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="NEfbTe1j/y2l8FLv6mtcMAYOj2yBqtCHf7bQSjXZ0Ys=">
   <bindingConfigurations>
-    <bindingConfiguration bindingType="netTcpBinding" name="NetTcpBinding_IDecrypt">
+    <bindingConfiguration bindingType="netTcpBinding" name="serviceDecrypt">
       <properties>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>NetTcpBinding_IDecrypt</serializedValue>
+          <serializedValue>serviceDecrypt</serializedValue>
         </property>
         <property path="/closeTimeout" isComplexType="false" isExplicitlyDefined="true" clrType="System.TimeSpan, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -82,7 +82,7 @@
           <serializedValue>System.ServiceModel.Configuration.NetTcpSecurityElement</serializedValue>
         </property>
         <property path="/security/mode" isComplexType="false" isExplicitlyDefined="true" clrType="System.ServiceModel.SecurityMode, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>None</serializedValue>
+          <serializedValue>Message</serializedValue>
         </property>
         <property path="/security/transport" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.TcpTransportSecurityElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>System.ServiceModel.Configuration.TcpTransportSecurityElement</serializedValue>
@@ -114,14 +114,14 @@
         <property path="/security/message/clientCredentialType" isComplexType="false" isExplicitlyDefined="false" clrType="System.ServiceModel.MessageCredentialType, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>Windows</serializedValue>
         </property>
-        <property path="/security/message/algorithmSuite" isComplexType="false" isExplicitlyDefined="false" clrType="System.ServiceModel.Security.SecurityAlgorithmSuite, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>Default</serializedValue>
+        <property path="/security/message/algorithmSuite" isComplexType="false" isExplicitlyDefined="true" clrType="System.ServiceModel.Security.SecurityAlgorithmSuite, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>Basic128</serializedValue>
         </property>
       </properties>
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="NetTcpBinding_IDecrypt" contract="ServiceReference2.IDecrypt" bindingType="netTcpBinding" address="net.tcp://decryptor.westeurope.cloudapp.azure.com:5050/Decryptor.svc/Decrypt" bindingConfiguration="NetTcpBinding_IDecrypt">
+    <endpoint name="serviceDecrypt" contract="ServiceReference2.IDecrypt" bindingType="netTcpBinding" address="net.tcp://decryptor.westeurope.cloudapp.azure.com:5050/Decryptor.svc/Decrypt" bindingConfiguration="serviceDecrypt">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>net.tcp://decryptor.westeurope.cloudapp.azure.com:5050/Decryptor.svc/Decrypt</serializedValue>
@@ -133,7 +133,7 @@
           <serializedValue>netTcpBinding</serializedValue>
         </property>
         <property path="/bindingConfiguration" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>NetTcpBinding_IDecrypt</serializedValue>
+          <serializedValue>serviceDecrypt</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>ServiceReference2.IDecrypt</serializedValue>
@@ -197,7 +197,7 @@
           <serializedValue>False</serializedValue>
         </property>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>NetTcpBinding_IDecrypt</serializedValue>
+          <serializedValue>serviceDecrypt</serializedValue>
         </property>
         <property path="/kind" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

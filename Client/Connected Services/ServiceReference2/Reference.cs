@@ -108,19 +108,7 @@ namespace Client.ServiceReference2 {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string TokenUserField;
-
-        public STG(bool statusOp, string operationVersion, string appVersion, string operationName, string info, string tokenUser, string tokenApp, object[] data)
-        {
-            StatusOp = statusOp;
-            OperationVersion = operationVersion;
-            AppVersion = appVersion;
-            OperationName = operationName;
-            Info = info;
-            TokenUser = tokenUser;
-            TokenApp = tokenApp;
-            Data = data;
-        }
-
+        
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
             get {

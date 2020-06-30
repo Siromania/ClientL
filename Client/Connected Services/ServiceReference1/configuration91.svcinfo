@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="g4jsaefHWL+gKNX/YOjLbCY/4IF8JZG9pYTPgkW5KuU=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="Pb7TVoI27WyA7FJZGrchnnSor2+rcvGtHKdMaoiGm8Y=">
   <bindingConfigurations>
-    <bindingConfiguration bindingType="netTcpBinding" name="NetTcpBinding_IAuthService">
+    <bindingConfiguration bindingType="netTcpBinding" name="serviceLogin">
       <properties>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>NetTcpBinding_IAuthService</serializedValue>
+          <serializedValue>serviceLogin</serializedValue>
         </property>
         <property path="/closeTimeout" isComplexType="false" isExplicitlyDefined="true" clrType="System.TimeSpan, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -82,7 +82,7 @@
           <serializedValue>System.ServiceModel.Configuration.NetTcpSecurityElement</serializedValue>
         </property>
         <property path="/security/mode" isComplexType="false" isExplicitlyDefined="true" clrType="System.ServiceModel.SecurityMode, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>None</serializedValue>
+          <serializedValue>Message</serializedValue>
         </property>
         <property path="/security/transport" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.TcpTransportSecurityElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>System.ServiceModel.Configuration.TcpTransportSecurityElement</serializedValue>
@@ -114,14 +114,14 @@
         <property path="/security/message/clientCredentialType" isComplexType="false" isExplicitlyDefined="false" clrType="System.ServiceModel.MessageCredentialType, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>Windows</serializedValue>
         </property>
-        <property path="/security/message/algorithmSuite" isComplexType="false" isExplicitlyDefined="false" clrType="System.ServiceModel.Security.SecurityAlgorithmSuite, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>Default</serializedValue>
+        <property path="/security/message/algorithmSuite" isComplexType="false" isExplicitlyDefined="true" clrType="System.ServiceModel.Security.SecurityAlgorithmSuite, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>Basic128</serializedValue>
         </property>
       </properties>
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="NetTcpBinding_IAuthService" contract="ServiceReference1.IAuthService" bindingType="netTcpBinding" address="net.tcp://decryptor.westeurope.cloudapp.azure.com:5050/Login.svc/Auth" bindingConfiguration="NetTcpBinding_IAuthService">
+    <endpoint name="serviceLogin" contract="ServiceReference1.IAuthService" bindingType="netTcpBinding" address="net.tcp://decryptor.westeurope.cloudapp.azure.com:5050/Login.svc/Auth" bindingConfiguration="serviceLogin">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>net.tcp://decryptor.westeurope.cloudapp.azure.com:5050/Login.svc/Auth</serializedValue>
@@ -133,7 +133,7 @@
           <serializedValue>netTcpBinding</serializedValue>
         </property>
         <property path="/bindingConfiguration" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>NetTcpBinding_IAuthService</serializedValue>
+          <serializedValue>serviceLogin</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>ServiceReference1.IAuthService</serializedValue>
@@ -197,7 +197,7 @@
           <serializedValue>False</serializedValue>
         </property>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>NetTcpBinding_IAuthService</serializedValue>
+          <serializedValue>serviceLogin</serializedValue>
         </property>
         <property path="/kind" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

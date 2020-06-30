@@ -104,6 +104,7 @@
     </Compile>
     <Compile Include="Model\Filex.cs" />
     <Compile Include="Model\Message.cs" />
+    <Compile Include="Model\STG.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="View\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>

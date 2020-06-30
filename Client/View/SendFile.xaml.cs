@@ -66,7 +66,7 @@ namespace Client.View
                 string info = "Envoi du msg a .net";
                 string tokenUser = this.userToken.Tag.ToString();
                 NameValueCollection appConfig = ConfigurationManager.AppSettings;
-                string tokenApp = appConfig.Get("AppToken");
+                string tokenApp = AppToken.APPTOKEN;
 
                 Filex f = new Filex(fileName);
                 string txt = f.readFile();

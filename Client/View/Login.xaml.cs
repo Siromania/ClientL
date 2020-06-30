@@ -32,29 +32,49 @@ namespace Client.View
             String login = this.Username.Text;
             String password = this.Password.Password;
             password = Sha256Hash(password);
-            string tokenApp = "f12458d120e6d32cf89ee714d35c723d8caa1273c3bcdf1ba79c63df7329254a";
+            string tokenApp = AppToken.APPTOKEN;
             User user = new User(login,password);
 
            // MessageBox.Show(login + "  " + password);
 
             //creating the object of WCF service client         
-           ServiceReference1.AuthServiceClient platform = new ServiceReference1.AuthServiceClient();
+            ServiceReference1.AuthServiceClient platform = new ServiceReference1.AuthServiceClient();
 
-            //assigning the output value from service Response         
-            Client.ServiceReference1.UserToken auth = platform.AuthUser(login, password, tokenApp);
+            //Setting the user credentials
+            //platform.ClientCredentials = System.Net.CredentialCache.DefaultCredentials;
+            /*platform.ClientCredentials.Windows.ClientCredential.Domain = "WORKSPACE";
+            platform.ClientCredentials.Windows.ClientCredential.UserName = "AzureUser2";
+            platform.ClientCredentials.Windows.ClientCredential.Password = "ProjetDev123";*/
 
-            //MessageBox.Show(auth.Id);
-
-            if (auth != null) { 
-                
-                SendFile r = new SendFile();
-                r.userToken.Tag = auth.Id;
-                this.NavigationService.Navigate(r);
-            }
-            else
+            try
             {
-                MessageBox.Show("The password or username is incorect");
+                //assigning the output value from service Response         
+                Client.ServiceReference1.UserToken auth = platform.AuthUser(login, password, tokenApp);
+                //MessageBox.Show(auth.Id);
+
+                if (auth != null)
+                {
+
+                    SendFile r = new SendFile();
+                    r.userToken.Tag = auth.Id;
+                    this.NavigationService.Navigate(r);
+                }
+                else
+                {
+                    MessageBox.Show("The password or username is incorect");
+                }
             }
+            catch (System.ServiceModel.Security.SecurityNegotiationException exc)
+            {
+                MessageBox.Show("Security keys negotiation failed");
+            }
+            catch (Exception exc)
+            {
+
+            }
+            
+
+            
         }
 
         private void btnOnClickRegister(object sender, RoutedEventArgs e)

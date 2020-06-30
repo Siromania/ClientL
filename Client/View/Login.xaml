@@ -43,7 +43,7 @@
                     FontWeight="Light"
                     Foreground="White"
                     Opacity="1"
-                    Text="Username" />
+                    Text="Martin" />
 
             </StackPanel>
             <Border
@@ -74,7 +74,7 @@
                     FontWeight="Light"
                     Foreground="White"
                     Opacity="0.5"
-                    Password="Password" />
+                    Password="4" />
 
             </StackPanel>
             <Border

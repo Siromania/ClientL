@@ -35,13 +35,12 @@ namespace Client.View
             string tokenApp = "f12458d120e6d32cf89ee714d35c723d8caa1273c3bcdf1ba79c63df7329254a";
             User user = new User(login,password);
 
-            MessageBox.Show(login + "  " + password);
+           // MessageBox.Show(login + "  " + password);
 
             //creating the object of WCF service client         
            ServiceReference1.AuthServiceClient platform = new ServiceReference1.AuthServiceClient();
 
             //assigning the output value from service Response         
-            //object auth = platform.AuthUser(login, password, tokenApp);
             Client.ServiceReference1.UserToken auth = platform.AuthUser(login, password, tokenApp);
 
             //MessageBox.Show(auth.Id);

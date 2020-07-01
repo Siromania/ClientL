@@ -75,18 +75,32 @@ namespace Client.View
                         txt
                     };
 
-                Task task = new Task(() =>
+                Client.ServiceReference2.STG msg = new Client.ServiceReference2.STG();
+                msg.StatusOp = statusOp;
+                msg.OperationVersion = operationVersion;
+                msg.AppVersion = appVersion;
+                msg.OperationName = operationName;
+                msg.Info = info;
+                msg.TokenUser = tokenUser;
+                msg.TokenApp = tokenApp;
+                msg.Data = data;
+
+
+
+                Task task = new Task((message) =>
                 {
-                    Client.ServiceReference2.STG msg = new STGClient(statusOp, operationVersion, appVersion, operationName, info, tokenUser, tokenApp, data);
-                    Client.ServiceReference2.STG call = platform.m_service(msg);
-                    System.Diagnostics.Debug.WriteLine("Return of the call = " + fileName + " - " + call.StatusOp.ToString());
+                     Client.ServiceReference2.STG call = platform.m_service((STG)message);
+                    //System.Diagnostics.Debug.WriteLine("Return of the call = " + fileName + " - " + call.Info + " " + call.OperationName );
+                    System.Diagnostics.Debug.WriteLine("Return of the call = " + fileName + " - " + call.Info  + " " + call.OperationVersion);
                     //MessageBox.Show("Return of the call = " + fileName +" - "+ call.StatusOp.ToString());
-                });
+                }, msg);
 
                 tasks.Add(task);
                 task.Start();
+                System.Diagnostics.Debug.WriteLine("Task lancé");
 
             }
+
             //Task.WaitAll(tasks.ToArray());
 
         }

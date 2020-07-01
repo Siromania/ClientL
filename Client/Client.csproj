@@ -93,6 +93,11 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="AppToken.cs" />
+    <Compile Include="Connected Services\JAXWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\ServiceReference1\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -166,6 +171,10 @@
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\JAXWS\CheckerServiceBean.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\JAXWS\CheckingService.wsdl" />
     <None Include="Connected Services\ServiceReference1\AuthService.wsdl" />
     <None Include="Connected Services\ServiceReference1\Client.ServiceReference1.CompositeType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -223,6 +232,7 @@
     <Resource Include="Assets\logoWhite.png" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\JAXWS\" />
     <WCFMetadataStorage Include="Connected Services\ServiceReference1\" />
     <WCFMetadataStorage Include="Connected Services\ServiceReference2\" />
   </ItemGroup>
@@ -252,6 +262,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\ServiceReference2\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\JAXWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\JAXWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\JAXWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

@@ -89,10 +89,15 @@ namespace Client.View
 
                 Task task = new Task((message) =>
                 {
+                    // Call a la platforme .Net
                      Client.ServiceReference2.STG call = platform.m_service((STG)message);
-                    //System.Diagnostics.Debug.WriteLine("Return of the call = " + fileName + " - " + call.Info + " " + call.OperationName );
                     System.Diagnostics.Debug.WriteLine("Return of the call = " + fileName + " - " + call.Info  + " " + call.OperationVersion);
-                    //MessageBox.Show("Return of the call = " + fileName +" - "+ call.StatusOp.ToString());
+
+                    if (call.StatusOp)
+                    {
+                       // createPdf(call.Data[]);
+                    }
+
                 }, msg);
 
                 tasks.Add(task);
@@ -110,5 +115,23 @@ namespace Client.View
             Login l = new Login();
             this.NavigationService.Navigate(l);
         }
+
+        //public  string createPdf(string path, string txt)
+        //{
+        //    string result = "j'ai pdf";
+        //    path = path.Split('\\').Last();
+        //    path = path.Replace("txt", "pdf");
+        //    PdfWriter writer = new PdfWriter("C:\\Users\\AzureUser\\Desktop\\" + path);
+        //    PdfDocument pdf = new PdfDocument(writer);
+        //    Document document = new Document(pdf);
+        //    Paragraph header = new Paragraph(txt)
+        //       .SetTextAlignment(TextAlignment.LEFT)
+        //       .SetFontSize(12);
+
+        //    document.Add(header);
+        //    document.Close();
+
+        //    return result;
+        //}
     }
 }
